@@ -2,7 +2,9 @@
 /*--------------------------------------------*/
 /* Email Submited Form           */
 /*--------------------------------------------*/
+
 $post = (!empty($_POST)) ? true : false;
+
 if($post){
     $to = "cassiebetts@gmail.com"; // Your e-mail here
 	$name = stripslashes($_POST['name']);
@@ -17,11 +19,13 @@ if($post){
          ."subject: ".$subject."\r\n"	
          ."Message: ".$message."\r\n"	
 	    ."X-Mailer: PHP/" . phpversion());
+
 	if($mail){
 		echo '<p>Thanks for submitting your email! Our manager will contact you shortly.</p>';
 	}
     
 }
+
 ?>
 
     <style type="text/css">
